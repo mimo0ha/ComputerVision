@@ -4,6 +4,7 @@ import mss
 import pyautogui
 import time
 
+
 def find_game_window(template_path):
     """
     Captures the screen and finds the game window using template matching.
@@ -36,6 +37,7 @@ def find_game_window(template_path):
             print("Game window not detected.")
             return None
 
+
 def monitor_game(bbox):
     """
     Monitor the game area and display it.
@@ -59,6 +61,7 @@ def monitor_game(bbox):
 
         cv2.destroyAllWindows()
 
+
 def main():
     # Path to the template image
     template_path = "karate kido2.png"
@@ -71,6 +74,7 @@ def main():
         monitor_game(bbox)
     else:
         print("Game window not found.")
+
 
 if __name__ == "__main__":
     main()
